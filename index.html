@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Теория — Электро vs Гибрид · Физика Автомобиля</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="block-page">
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+  <div class="noise"></div>
+
+  <div class="page-bg"><div class="hero-bg"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div></div>
+
+  <nav class="nav" id="mainNav">
+    <div class="nav-logo">ФизАвто<span>·26</span></div>
+    <span class="nav-single">Теория</span>
+  </nav>
+
+  <section class="theory" id="theory">
+    <div class="section-label">/ 01 — Теория</div>
+    <h2 class="section-title">Физика<br/><em>в основе</em></h2>
+    <div class="theory-grid">
+      <div class="theory-card reveal">
+        <div class="theory-icon electric-icon">⚡</div>
+        <h3>Электродвигатель</h3>
+        <p>Устройство, преобразующее электрическую энергию в механическую. Работа основана на взаимодействии тока и магнитного поля. КПД достигает <strong class="electric-text">90–95%</strong> — кратно выше ДВС.</p>
+        <div class="theory-detail">
+          <div class="td-row"><span class="td-label">Статор</span><span>Неподвижная часть, создаёт магнитное поле</span></div>
+          <div class="td-row"><span class="td-label">Ротор</span><span>Вращающаяся часть двигателя</span></div>
+          <div class="td-row"><span class="td-label">Инвертор</span><span>Преобразует DC→AC для управления</span></div>
+          <div class="td-row"><span class="td-label">Рекуперация</span><span>Возврат энергии при торможении</span></div>
+        </div>
+      </div>
+      <div class="theory-card reveal" style="transition-delay:0.1s">
+        <div class="theory-icon hybrid-icon">♻</div>
+        <h3>Гибридный двигатель</h3>
+        <p>Сочетает ДВС и электромотор. На малых скоростях — электротяга, на высоких — ДВС, при ускорении — оба одновременно. Управление полностью автоматическое.</p>
+        <div class="theory-detail">
+          <div class="td-row"><span class="td-label hybrid-label">Послед.</span><span>ДВС только генератор, колёса — электро</span></div>
+          <div class="td-row"><span class="td-label hybrid-label">Парал.</span><span>Оба передают мощность на колёса</span></div>
+          <div class="td-row"><span class="td-label hybrid-label">Послед-пар.</span><span>Комбинация — наиболее эффективна</span></div>
+          <div class="td-row"><span class="td-label hybrid-label">Цикл Аткинсона</span><span>КПД ДВС до 41%</span></div>
+        </div>
+      </div>
+      <div class="theory-card reveal" style="transition-delay:0.2s">
+        <div class="theory-icon kpd-icon">📐</div>
+        <h3>КПД и физика</h3>
+        <p>Коэффициент полезного действия — ключевой физический показатель. Электромоторы превосходят ДВС в 2–3 раза, что напрямую влияет на стоимость километра.</p>
+        <div class="kpd-bars">
+          <div class="kpd-bar-row">
+            <span>Электромотор</span>
+            <div class="kpd-bar-wrap"><div class="kpd-bar electric-bar" style="width:92%"><span>92%</span></div></div>
+          </div>
+          <div class="kpd-bar-row">
+            <span>Цикл Аткинсона</span>
+            <div class="kpd-bar-wrap"><div class="kpd-bar hybrid-bar" style="width:41%"><span>41%</span></div></div>
+          </div>
+          <div class="kpd-bar-row">
+            <span>Обычный ДВС</span>
+            <div class="kpd-bar-wrap"><div class="kpd-bar petrol-bar" style="width:30%"><span>30%</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">ФизАвто<span>·26</span></div>
+      <p>Учебный проект по физике</p>
+      <p class="footer-author">Автор: Весёлкин Данил Андреевич, 11 Б класс</p>
+      <p class="footer-note">Научный руководитель: Павлова Ольга Владимировна</p>
+      <p class="footer-school">МОУ «Средняя школа № 2 имени Л.П. Семеновой», г. Ярославль · 2026–2027 уч. год</p>
+    </div>
+  </footer>
+
+  <!-- ─── MODAL ─── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-glass" id="modal">
+      <button class="modal-close" id="modalClose">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
